@@ -1,0 +1,905 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(fonts/Peshang_Des_5_Bold.ttf);
+}
+
+@font-face {
+    font-family: secondFont;
+    src: url(fonts/helvetica.ttf);
+}
+
+.paragraph {
+    font-family: secondFont;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: myFirstFont;
+}
+
+.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+i,
+p,
+a,
+h5,
+h6 {
+    font-family: myFirstFont;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.chesignerLogo {
+    font-size: 25px;
+    font-style: normal;
+    color: white !important;
+}
+
+.navbar-black {
+    background-color: black !important;
+}
+
+.navfont-white {
+    color: white !important;
+}
+
+footer {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    min-height: 450px;
+}
+
+.footer-content {
+    padding-left: 75px;
+    text-align: left;
+}
+
+.footer-content p {
+    font-family: myFirstFont;
+}
+
+.button1 {
+    color: white;
+    background-color: #38C7EB;
+    font-family: myFirstFont;
+    padding: 7px 29px;
+    margin: 15px 0px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 6px;
+    border: none;
+    border: 1px solid #38C7EB;
+}
+
+.button1:hover {
+    color: white;
+    background-color: #2bbbdf;
+    border: 1px solid #38C7EB;
+}
+
+.button2 {
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 15px 0px;
+    cursor: pointer;
+    font-family: myFirstFont;
+    border: 1px solid white;
+}
+
+.button2:hover {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+}
+
+.b-button {
+    color: black;
+    background-color: white;
+    font-family: myFirstFont;
+    padding: 7px 29px;
+    margin: 15px 0px;
+    cursor: pointer;
+    border: 1px solid #707070;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.b-button:hover {
+    color: #707070;
+    background-color: white;
+}
+
+.footer-links {
+    padding: 80px 0 0 0;
+}
+
+.footer-links a {
+    color: white;
+}
+
+.social-apps i {
+    display: inline-flex;
+    color: black;
+    font-size: 17px;
+    background-color: white;
+    padding: 11px;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    transition: .2s;
+    border: 1px solid white;
+}
+
+.social-apps i:hover {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid white;
+}
+
+div.apps-circle {
+    display: inline-flex;
+    margin: 0 5px;
+}
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.borderd-feild {
+    background-color: black;
+    border: 1px solid white;
+    padding: 6px 35px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.Icon-inside {
+    position: relative;
+}
+
+.Icon-inside i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px 10px;
+}
+
+.Icon-inside-search i {
+    position: absolute;
+    padding: 23px 10px;
+    color: #707070;
+    left: 41%;
+    font-size: 16px;
+}
+
+.header-bg {
+    background-color: #F7F7F7;
+}
+
+.bold-slogan {
+    font-weight: 400;
+}
+
+.hr-slogan {
+    width: 10%;
+    color: black;
+    border: 3px solid;
+    margin: 5px 2px;
+}
+
+.g-color {
+    color: #707070;
+}
+
+.header-search {
+    width: 66%;
+    border-radius: 10px;
+    padding: 6px 14px;
+    border: 1px solid #707070;
+    font-family: myFirstFont;
+    margin-right: 5px;
+}
+
+.header-sec1 {
+    padding: 70px;
+}
+
+.header-sec2 {
+    padding: 70px;
+}
+
+.hr-blue {
+    width: 55px;
+    height: 4px;
+    background-color: #38C7EB;
+}
+
+.carousel-indicators li {
+    border: 1px solid #707070 !important;
+}
+
+.carousel-indicators li.active {
+    border: 1px solid #707070 !important;
+    background-color: #707070 !important;
+}
+
+.carousel-inner .item img {
+    width: 400px;
+    height: 350;
+    object-fit: fill;
+}
+
+.carousel-inner {
+    height: 400px !important;
+}
+
+
+/*------------------ Challenges Page --------------*/
+
+#searchall {
+    padding: 5px 18px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    color: #707070;
+}
+
+#filterSearch {
+    padding: 5px 18px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    color: #707070;
+    background-color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #707070;
+    text-align: center;
+    padding: 6px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #707070;
+    background-color: #F7F7F7;
+    border-radius: 7px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    font-family: arial;
+    border-radius: 11px;
+    border: 1px solid #707070;
+    margin: 25px 0;
+}
+
+.card-header,
+.card-body {
+    padding: 10px 10px 0 10px !important;
+}
+
+.chall-date {
+    color: #707070;
+    float: right;
+}
+
+.price {
+    color: grey;
+    font-size: 19px;
+}
+
+.card button {
+    outline: 0;
+    padding: 12px;
+    color: #000;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 10px;
+    transition: .2s;
+    font-family: myFirstFont;
+    border-bottom: 1px solid white;
+}
+
+.card button:hover {
+    background-color: #000000;
+    color: white;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.j-btn {
+    border-radius: 0px 0px 10px 0px;
+    width: 50%;
+    border: .5px solid #707070;
+    border-right: 1px solid white;
+}
+
+.f-btn {
+    border-radius: 0px 0px 0px 10px;
+    width: 50%;
+    border: .5px solid #707070;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+
+/*------------------ Designers Page --------------*/
+
+.ratings i {
+    color: #cecece;
+    font-size: 12px;
+}
+
+.rating-color {
+    color: #fbc634 !important
+}
+
+.skill-box {
+    color: #38C7EB;
+    background-color: white;
+    border: 1px solid#38C7EB;
+    padding: 3px;
+    width: 30%;
+    font-size: 9px;
+    text-align: center;
+    margin: 0 3px 0 0;
+}
+
+.skills-show {
+    display: flex;
+}
+
+
+/*------------------ Ready Works Page --------------*/
+
+.card2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    font-family: arial;
+    border-radius: 11px;
+}
+
+.card2-header {
+    padding: 10px 10px 0 10px;
+}
+
+.card2-body {
+    padding: 10px 10px 0 10px;
+    background-color: #f7f7f7;
+    border-radius: 10px
+}
+
+.card2-footer {
+    display: flex;
+    background-color: #70707054;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    top: -50px;
+    border-radius: 0 0 10px 10px;
+    color: white;
+    opacity: 0;
+    transition: .2s;
+    padding: 8px;
+}
+
+.card2-footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.card2:hover+.card2-footer,
+.card2-footer:hover {
+    opacity: 1;
+}
+
+.card2 button {
+    outline: 0;
+    padding: 12px;
+    color: #000;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 10px;
+    transition: .2s;
+    font-family: myFirstFont;
+    border-bottom: 1px solid white;
+}
+
+.card2 button:hover {
+    background-color: #000000;
+    color: white;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.cardButton {
+    background-color: white;
+    color: #a6a6a6;
+    border: none;
+    border-radius: 7px;
+    padding: 3px 7px;
+    margin: 0 2px;
+}
+
+.cardButton:hover {
+    background-color: rgb(229, 229, 229);
+    color: #848484;
+}
+
+.myDiv:hover+.hide {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.cardButton2 a {
+    color: #a6a6a6;
+    text-decoration: none;
+}
+
+.cardButton2 a:hover {
+    color: #38C7EB;
+}
+
+
+/* ------------------- Conatct start ------------------ */
+
+.header-title {
+    text-align: center;
+    color: #38C7EB;
+}
+
+#tip {
+    display: none;
+}
+
+.fadeIn {
+    animation-duration: 3s;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    border: 1px solid #38C7EB;
+}
+
+.textarea-contact {
+    resize: none;
+}
+
+.btn-send {
+    border-radius: 0px;
+    border: 1px solid #38C7EB;
+    background: #38C7EB;
+    color: #fff;
+}
+
+.btn-send:hover {
+    border: 1px solid #38C7EB;
+    background: #fff;
+    color: #38C7EB;
+    transition: background 0.5s;
+}
+
+.second-portion {
+    margin-top: 50px;
+}
+
+@import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css";
+@import "http://fonts.googleapis.com/css?family=Roboto:400,500";
+.box>.icon {
+    text-align: center;
+    position: relative;
+}
+
+.box>.icon>.image {
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    width: 88px;
+    height: 88px;
+    border: 8px solid white;
+    line-height: 88px;
+    border-radius: 50%;
+    background: #38C7EB;
+    vertical-align: middle;
+}
+
+.box>.icon:hover>.image {
+    background: #333;
+}
+
+.box>.icon>.image>i {
+    font-size: 36px !important;
+    color: #fff !important;
+}
+
+.box>.icon:hover>.image>i {
+    color: white !important;
+}
+
+.box>.icon>.info {
+    margin-top: -24px;
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid #e0e0e0;
+    padding: 15px 0 10px 0;
+    min-height: 163px;
+}
+
+.box>.icon:hover>.info {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: #e0e0e0;
+    color: white;
+}
+
+.box>.icon>.info>h3.title {
+    font-family: "Robot", sans-serif !important;
+    font-size: 16px;
+    color: #222;
+    font-weight: 700;
+}
+
+.box>.icon>.info>p {
+    font-family: "Robot", sans-serif !important;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5em;
+    margin: 20px;
+}
+
+.box>.icon:hover>.info>h3.title,
+.box>.icon:hover>.info>p,
+.box>.icon:hover>.info>.more>a {
+    color: #222;
+}
+
+.box>.icon>.info>.more a {
+    font-family: "Robot", sans-serif !important;
+    font-size: 12px;
+    color: #222;
+    line-height: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.box>.icon:hover>.info>.more>a {
+    color: #fff;
+    padding: 6px 8px;
+    background-color: #63B76C;
+}
+
+.box .space {
+    height: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .contact-form {
+        margin-top: 25px;
+    }
+    .btn-send {
+        width: 100%;
+        padding: 10px;
+    }
+    .second-portion {
+        margin-top: 25px;
+    }
+}
+
+
+/* ------------------ Sign Up Form --------------- */
+
+#sign-bg {
+    background-color: #ebebeb;
+}
+
+.hr-sign {
+    width: 6%;
+    color: black;
+    border: 2px solid;
+    margin: 5px 2px;
+}
+
+.inputCstm {
+    border-radius: 8px;
+    padding: 19px;
+}
+
+.signForm {
+    background-color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: myFirstFont;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.separator:not(:empty)::before {
+    margin-right: 1.25em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: 1.25em;
+}
+
+.btn1 {
+    color: white;
+    background-color: #38C7EB;
+    font-family: myFirstFont;
+    padding: 9px 29px;
+    margin: 15px 0px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 6px;
+    border: none;
+    font-size: 17px;
+}
+
+.btn1:hover {
+    color: #ffffff;
+    background-color: #2bbbdf;
+    border: 1px solid #38C7EB;
+}
+
+.google-signUp {
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 15px 0px;
+    border: none !important;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+    background-color: #ebebeb !important;
+    background-repeat: no-repeat;
+    background-position: 12px 11px;
+    font-size: 15px !important;
+    text-align: left !important;
+    padding: 10px 47px !important;
+}
+
+.google-signUp:hover {
+    background-color: #f1efef !important;
+    color: black !important;
+    border: none !important;
+}
+
+.apple-signUp {
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 15px 0px;
+    border: none !important;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+    font-size: 15px !important;
+    text-align: left !important;
+    padding: 10px 47px !important;
+    background-color: #ebebeb !important;
+}
+
+.apple-signUp:hover {
+    background-color: #f1efef !important;
+    color: black !important;
+    border: none !important;
+}
+
+.apple-icon {
+    display: inline-flex;
+    padding: -3px;
+    margin-left: -34px;
+    margin-right: 14px;
+}
+
+.twitter-signUp {
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 15px 0px;
+    border: none !important;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+    font-size: 15px !important;
+    text-align: left !important;
+    padding: 10px 47px !important;
+    background-color: #ebebeb !important;
+}
+
+.twitter-signUp:hover {
+    background-color: #f1efef !important;
+    color: black !important;
+    border: none !important;
+}
+
+.twitter-icon {
+    display: inline-flex;
+    padding: -3px;
+    margin-left: -34px;
+    margin-right: 14px;
+    color: #1DA1F2;
+}
+
+.radioSpace {
+    margin-left: 8px;
+}
+
+.fpass {
+    float: right;
+    left: 37%;
+}
+
+.grey-bg {
+    background-color: #ebebeb;
+}
+
+
+/* ------------------ Challenge Form --------------- */
+
+.challCost1 {
+    float: left;
+    margin: 7px;
+    font-size: 20px;
+}
+
+.challCost2 {
+    float: right;
+    margin: 9px;
+    font-size: 20px;
+}
+
+.rangeLeft {
+    float: left;
+    margin: 7px;
+    font-size: 14px;
+}
+
+.rangeRight {
+    float: right;
+    margin: 9px;
+    font-size: 14px;
+}
+
+.invoiceTable th {
+    font-weight: 200;
+}
+
+th,
+td,
+b,
+label,
+option {
+    font-family: myFirstFont;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #707070;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #707070;
+    cursor: pointer;
+}
+
+.form-card {
+    background-color: white;
+    border: none;
+    padding: 15px;
+    box-shadow: none;
+}
+
+input[type=checkbox] {
+    margin-right: 5px;
+}
+
+.cstm-contain {
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 29px;
+    margin-bottom: 29px;
+}
+
+.ratings2 i {
+    color: #cecece;
+    font-size: 10px;
+    margin-right: -2px;
+}
+
+.rating2-color {
+    color: #fbc634 !important
+}
+
+.ratings2 small {
+    font-size: 10px;
+}
+input[type="range"]::-webkit-slider-thumb {
+    width: 15px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 15px;
+    cursor: ew-resize;
+    background: #FFF;
+    box-shadow: -405px 0 0 400px #605E5C;
+    border-radius: 50%;
+    
+}
+
+.card button.btn_register{
+    color: white;
+    background-color: #38C7EB;
+    font-family: myFirstFont;
+    padding: 9px 29px;
+    margin: 15px 0px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 6px;
+    border: none;
+    font-size: 17px;
+}
+
+
+.card button.btn_register:hover {
+    color: #ffffff;
+    background-color: #2bbbdf;
+    border: 1px solid #38C7EB;
+}

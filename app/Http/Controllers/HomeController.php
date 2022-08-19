@@ -25,9 +25,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
-        $slides= SlideShow::get(); 
+        $slides= SlideShow::get();
         @$data = array(
             'title' => 'Homepage | الصفحة الرئيسية',
         );
@@ -111,7 +113,7 @@ class HomeController extends Controller
         );
         return view('auth.signin')->with($data);
     }
-    
+
     public function signUpPage()
     {
         @$data = array(
@@ -165,7 +167,7 @@ class HomeController extends Controller
     }
 
 
-    
+
     public function terms()
     {
         $terms = TermsAndPolicy::get();
@@ -238,6 +240,6 @@ class HomeController extends Controller
     }
 
 
-   
+
 
 }

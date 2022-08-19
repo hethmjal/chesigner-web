@@ -25,7 +25,7 @@ class OrderDesignerController extends Controller
      */
     public function index()
     {
-        
+
         $orders = Order::where('designer_id',Auth::id())->where('status','waiting to response')->latest()->get();
 
 
@@ -112,10 +112,10 @@ class OrderDesignerController extends Controller
         $order->status = "Accepted";
         $order->save();
         $data1  = [];
-        $data1['designer_id'] = $order->designer_id; 
-        $data1['order_id'] = $order->id;    
-        $data1['status'] = 'working on';      
-  
+        $data1['designer_id'] = $order->designer_id;
+        $data1['order_id'] = $order->id;
+        $data1['status'] = 'working on';
+
         Order_Work::create($data1);
         $message = [
             'title'=>'order accepted',
@@ -132,14 +132,13 @@ class OrderDesignerController extends Controller
             $builder->join('participants as participants2','participants2.conversation_id' ,'=','participants.conversation_id')
             ->where('participants.user_id','=',$designer_id)
             ->where('participants2.user_id','=',$user_id);
-        })->first();  
+        })->first();
         if (!$conversation) {
-
         $conversation = Conversation::create([
             'user_id'=>$order->user_id,
             'type'=>'peer'
-        ]);  
-        
+        ]);
+
         $conversation->participants()->attach([
             $order->user_id,Auth::id()
         ]);

@@ -30,7 +30,7 @@
         <!-- end search compt -->
         <!-- user list -->
 <div class="conv"></div>
-       
+
 
 
       {{--  <div class="flex flex-row py-4 px-2 items-center border-b-2 border-l-4 border-blue-400">
@@ -55,7 +55,7 @@
       <!-- message -->
       <div class="w-full px-5 flex flex-col justify-between">
         <div class="flex flex-col mt-5"         @if($activeChat)id="body-chat"@endif>
-         
+
           @foreach ($messages as $message)
 
           @if ($message->user_id == Auth::id())
@@ -70,7 +70,7 @@
             <div class="img1">
             <img src="{{asset('uploads/'.Auth::user()->profile_photo_path)}}" class="object-cover h-8 w-8 rounded-full" alt=""/>
           </div>
-          </div>  
+          </div>
 
           @else
           <small dir="ltr" class="block">{{$message->created_at->diffForHumans()}}</small>
@@ -84,13 +84,13 @@
               {{$message->body}}
 
             </div>
-            
+
           </div>
-        
+
           @endif
-         
+
           @endforeach
-       
+
         </div>
         @if ($activeChat)
 
@@ -99,14 +99,14 @@
           <form action="{{route('api.message.store')}}" class="chat" method="POST">
             @csrf
             <textarea name="message"  placeholder="type your message here..."    class="w-full bg-gray-300 py-5 px-3 rounded-xl"id="" cols="30" rows="1"></textarea>
-                   
+
             <input type="hidden" name="conversation_id" value="{{$activeChat->id}}">
-        
+
           <input type="submit" class="btn btn-success" value="send">
         </form>
         @endif
 
-         
+
         </div>
       </div>
       <!-- end message -->
@@ -147,7 +147,7 @@
           </div>
         </div>
       </a>`;
-              
+
             }
             console.log(conv_div);
           $('.conv').html(conv_div);

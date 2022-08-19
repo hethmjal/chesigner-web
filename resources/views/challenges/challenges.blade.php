@@ -5,6 +5,7 @@
     <br>
     <br>
 
+
     <section class="header-bg">
         <div class="row">
             <div class="col-md-6 header-sec1">
@@ -120,4 +121,36 @@
             <br>
         </div>
     </div>
+    <script>
+        //  submit form by vue js
+        var app = new Vue({
+            el: '#app',
+            data: {
+                name: '',
+                email: '',
+                message: ''
+            },
+            methods: {
+                submitForm: function() {
+                    var data = {
+                        name: this.name,
+                        email: this.email,
+                        message: this.message
+                    }
+                    axios.post('/contact', data)
+                        .then(function(response) {
+                            console.log(response);
+                        })
+                        .catch(function(error) {
+                            console.log(error);
+                        });
+                }
+            }
+        });
+
+        
+
+
+
+    </script>
 @endsection

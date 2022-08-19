@@ -27,7 +27,7 @@ class ChallengeDesignerController extends Controller
         @$data = array(
             'title' => 'Designer Panel | Challenges',
         );
-        
+
         return view('designerPanel.challengesPanel.index',['challenges'=>$challenges])->with($data);
     }
 
@@ -38,7 +38,7 @@ class ChallengeDesignerController extends Controller
         @$data = array(
             'title' => 'Designer Panel | My Challenges',
         );
-        
+
         return view('designerPanel.challengesPanel.myChallenges',['challenges'=>$challenges])->with($data);
     }
 
@@ -76,7 +76,7 @@ class ChallengeDesignerController extends Controller
                 @$data = array(
             'title' => 'Designer Panel | Challenges | Show challenge',
         );
-        
+
         return view('designerPanel.challengesPanel.challengeShow',['challenge'=>$challenge])->with($data);
     }
 
@@ -96,7 +96,7 @@ class ChallengeDesignerController extends Controller
         @$data = array(
             'title' => 'Designer Panel | Challenges | Submit work',
         );
-        
+
         return view('designerPanel.challengesPanel.challengeSubmit',['work'=>$work])->with($data);
     }
 
@@ -110,7 +110,7 @@ class ChallengeDesignerController extends Controller
     public function update(Request $request, $id)
     {
        // dd($request);
-       
+
 
         $work = ChallengeWork::findOrfail($id);
         $challenge = Challenge::findOrFail($work->challenge_id);
@@ -125,35 +125,35 @@ class ChallengeDesignerController extends Controller
         $data['note'] = $request->note;
 
         if ($request->hasFile('image')) {
-           
+
             $filenameWithExt = $request->file('image')->getClientOriginalName ();
             $fileNameToStore = time(). '_'. $filenameWithExt;
-            
+
                $file = $request->file('image');
                $image=$file->storeAs('/images',$fileNameToStore,[
                    'disk'=>'uploads'
-               ]);                 
+               ]);
               $data['image'] = $image;
 
             }
             if ($request->hasFile('file')) {
-           
+
                 $filenameWithExt = $request->file('file')->getClientOriginalName ();
                 $fileNameToStore = time(). '_'. $filenameWithExt;
-                
+
                    $file = $request->file('file');
                    $file=$file->storeAs('/files',$fileNameToStore,[
                        'disk'=>'uploads'
-                   ]);            
+                   ]);
                    $data['file_name'] = $request->file('file')->getClientOriginalName();
                    $data['file_ext'] = $request->file('file')->extension();;
-     
+
                    $data['file'] = $file;
 
                 }
                 $data['submit_work'] = 'yes';
                 $work->update($data);
-                
+
                 $message = [
                     'title'=>'add work in your challenge',
                     'body'=> 'Designer '.Auth::user()->name.' add work in challenge '.$work->challenge->title,
@@ -177,8 +177,8 @@ class ChallengeDesignerController extends Controller
     {
         //
     }
-    
-   
+
+
     public function request_to_join_challenge($challenge_id)
     {
         $challenge = Challenge::findOrFail($challenge_id);
@@ -192,17 +192,17 @@ class ChallengeDesignerController extends Controller
             'order_id'=>$order->id,
         ];
             $user = User::findOrFail($challenge->user_id);
-           $user->notify(new OrderNotification($order,$message));  
+           $user->notify(new OrderNotification($order,$message));
            return redirect()->route('designer.mychallenge')->with('success','request sent to join  challenge '.$challenge->title.' success');
 
     }
 
-    
-    
+
+
     public function subscribe($id)
     {
         $challenge = Challenge::findOrfail($id);
-        
+
         $data['designer_id'] = Auth::id();
         $data['challenge_id'] = $challenge->id;
         $data['submit_work'] = "no";
@@ -212,7 +212,7 @@ class ChallengeDesignerController extends Controller
         $i++;
         $challenge->remainderofexpert = $i;
         $challenge->save();
-    } 
+    }
     elseif(Auth::user()->degree == "Professional"){
         $i=$challenge->remainderofprofessional;
         $i++;
@@ -230,7 +230,7 @@ class ChallengeDesignerController extends Controller
        $challenge->status ="Active"  ;
        $challenge->expir_date = Carbon::now()->addDays($challenge->deadline);
        $challenge->save();
-   
+
    }
     $message = [
         'title'=>'subscribe in your challenge',
@@ -241,9 +241,17 @@ class ChallengeDesignerController extends Controller
         'order_id'=>$work->id,
     ];
         $user = User::findOrFail($challenge->user_id);
-       $user->notify(new OrderNotification($work,$message));  
+       $user->notify(new OrderNotification($work,$message));
        return redirect()->route('designer.mychallenge')->with('success','subscribe in challenge '.$work->challenge->title.' success');
 
     }
-    
+
+
+
+
+
+
+
+
+
 }

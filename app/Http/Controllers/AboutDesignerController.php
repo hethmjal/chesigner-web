@@ -22,7 +22,8 @@ class AboutDesignerController extends Controller
      */
     public function index()
     {
-        //
+        // get random number
+
     }
 
     /**
@@ -52,11 +53,11 @@ class AboutDesignerController extends Controller
         $data = [];
         $user = Auth::user();
         if ($request->hasFile('image')) {
-           
+
             // Filename To store
             $filenameWithExt = $request->file('image')->getClientOriginalName ();
             $fileNameToStore = time(). '_'. $filenameWithExt;
-            
+
                $file = $request->file('image');
                $image=$file->storeAs('/images',$fileNameToStore,[
                    'disk'=>'uploads'
@@ -68,11 +69,11 @@ class AboutDesignerController extends Controller
             }
 
               if ($request->hasFile('background')) {
-           
+
             // Filename To store
             $filenameWithExt = $request->file('background')->getClientOriginalName ();
             $fileNameToStore = time(). '_'. $filenameWithExt;
-            
+
                $file = $request->file('background');
                $image=$file->storeAs('/images',$fileNameToStore,[
                    'disk'=>'uploads'
@@ -80,14 +81,14 @@ class AboutDesignerController extends Controller
                Storage::disk('uploads')->delete($user->background_photo_path);
 
                $data['background_photo_path'] = $image;
-               
-               
+
+
             }
             $user->update($data);
             return redirect()->route('profiledesignerresource.about')->with('status','updated success');
-             
+
     }
-    
+
     /**
      * Store a newly created resource in storage.
      *
@@ -96,7 +97,7 @@ class AboutDesignerController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $request->validate([
             'body'=>'required',
         ]);
@@ -152,4 +153,32 @@ class AboutDesignerController extends Controller
         $about = AboutDesigner::where('user_id',Auth::user()->id)->first();
         $about->delete();
     }
+
+
+
+    //function to destroy user
+    public function destroyuser($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->route('profiledesignerresource.about')->with('status','deleted success');
+    }
+    //function to get user ccountry by ip address
+
+    public function getUserCountry()
+    {
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}"));
+        return $details->country;
+    }
+
+
+
+
+
+
+
+
+
+
 }

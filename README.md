@@ -1,4 +1,4 @@
-How to install project and run.
+## How to install project and run.
 
 1-run this command "git clone https://github.com/hethmjal/chesigner-web.git"
 
